@@ -33,10 +33,7 @@ pipeline{
          
              }
          }
-        stage('Deploying to prodduction){
-            steps{
-                sh "scp -i /c/Users/nagamurallidhar/Desktop/keypairs/jenkinsserver.pem **/target/*.war ec2-user@${params.tomcat_prod}:/opt/tomcat-8.5.45/webapps"
-            }
+        
         } 
     }
 
